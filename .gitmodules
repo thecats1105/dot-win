@@ -1,0 +1,3 @@
+[submodule ".config/powershell/argc-completions"]
+	path = .config/powershell/argc-completions
+	url = https://github.com/sigoden/argc-completions

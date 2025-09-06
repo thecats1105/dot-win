@@ -1,0 +1,276 @@
+watch_stylesheet: true
+watch_config: true
+debug: false
+
+bars:
+  primary-bar:
+    enabled: true
+    screens: ['*']
+    class_name: 'yasb-bar'
+    alignment:
+      position: 'top'
+      center: false
+    blur_effect:
+      enabled: true
+      acrylic: false
+      dark_mode: true
+      round_corners: false
+      border_color: None
+    window_flags:
+      always_on_top: false
+      windows_app_bar: true
+    dimensions:
+      width: '100%'
+      height: 40
+    padding:
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+    widgets:
+      left: ['home', 'launchpad', 'media', 'cava', 'weather']
+      center: ['clock', 'apps']
+      right: ['volume', 'notifications', 'power_menu']
+
+widgets:
+  # Home
+  home:
+    type: 'yasb.home.HomeWidget'
+    options:
+      label: "<span>\ue62a</span>"
+      menu_list:
+        - { title: 'Home', path: '~' }
+        - { title: 'Download', path: "~\\Downloads" }
+        - { title: 'Documents', path: "~\\Documents" }
+        - { title: 'Pictures', path: "~\\Pictures" }
+      system_menu: true
+      power_menu: false
+      blur: true
+      round_corners: true
+      round_corners_type: 'normal'
+      border_color: '#585b70'
+      distance: 6
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+      alignment: 'left'
+      direction: 'down'
+      menu_labels:
+        system: 'System Settings'
+        about: 'About This PC'
+        task_manager: 'Task Manager'
+
+  # Media
+  media:
+    type: 'yasb.media.MediaWidget'
+    options:
+      label: "<span>\udb80\udf87</span> {title}"
+      label_alt: "<span>\udb80\udf87</span> {title} - {artist}"
+      hide_empty: true
+      callbacks:
+        on_left: 'toggle_media_menu'
+        on_middle: 'do_nothing'
+        on_right: 'toggle_label'
+      max_field_size:
+        label: 40
+        label_alt: 60
+      show_thumbnail: false
+      controls_only: false
+      controls_left: false
+      thumbnail_alpha: 80
+      thumbnail_padding: 8
+      thumbnail_corner_radius: 16
+      icons:
+        prev_track: "\udb81\udcae"
+        next_track: "\udb81\udcad"
+        play: "\udb81\udc0a"
+        pause: "\udb80\udfe4"
+      media_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: 'normal'
+        border_color: '#585b70'
+        alignment: 'right'
+        direction: 'down'
+        offset_top: 6
+        offset_left: 10
+        thumbnail_corner_radius: 8
+        thumbnail_size: 120
+        max_title_size: 80
+        max_artist_size: 20
+        show_source: true
+      media_menu_icons:
+        play: "\ue768"
+        pause: "\ue769"
+        prev_track: "\ue892"
+        next_track: "\ue893"
+      label_shadow:
+        enabled: true
+        color: 'black'
+        radius: 3
+        offset: [1, 1]
+
+  # Clock
+  clock:
+    type: 'yasb.clock.ClockWidget'
+    options:
+      label: "<span>\uf017</span> {%a %d %b %H:%M }"
+      label_alt: '{%A %d %B %Y %H:%M:%S}'
+      timezones: []
+    calendar:
+      blur: True
+      round_corners: True
+      round_corners_type: 'normal'
+      border_color: '#585b70'
+      alignment: 'center'
+      direction: 'down'
+      distance: 6
+
+  # Weather
+  weather:
+    type: 'yasb.weather.WeatherWidget'
+    options:
+      label: '<span>{icon}</span> {temp}'
+      label_alt: '{location}: Min {min_temp}, Max {max_temp}, Humidity {humidity}'
+      api_key: env
+      update_interval: 600
+      hide_decimal: true
+      location: env
+      callbacks:
+        on_left: 'toggle_label'
+      icons:
+        sunnyDay: "\udb81\udd99"
+        clearNight: "\udb81\udd99"
+        cloudyDay: "\udb81\udd99"
+        cloudyNight: "\udb81\udd99"
+        rainyDay: "\udb81\udd99"
+        rainyNight: "\udb81\udd99"
+        snowyIcyDay: "\udb81\udd99"
+        snowyIcyNight: "\udb81\udd99"
+        blizzard: "\udb81\udd99"
+        default: "\udb81\udd99"
+
+  # Volume
+  volume:
+    type: 'yasb.volume.VolumeWidget'
+    options:
+      label: '<span>{icon}</span> {level}'
+      label_alt: '{volume}'
+      volume_icons:
+        - "\udb81\udf5f "
+        - "\uf026 "
+        - "\uf026 "
+        - "\uf027 "
+        - "\uf028 "
+      callbacks:
+        on_right: 'exec cmd.exe /c start ms-settings:sound'
+
+  # Power Menu
+  power_menu:
+    type: 'yasb.power_menu.PowerMenuWidget'
+    options:
+      label: "\uf011"
+      uptime: True
+      blur: False
+      blur_background: True
+      animation_duration: 200
+      button_row: 5
+      buttons:
+        shutdown: ["\uf011", 'Shut Down']
+        restart: ["\uead2", 'Restart']
+        signout: ["\udb80\udf43", 'Sign out']
+        hibernate: ["\uf28e", 'Hibernate']
+        sleep: ["\u23fe", 'Sleep']
+        cancel: ['', 'Cancel']
+
+  # Cava
+  cava:
+    type: 'yasb.cava.CavaWidget'
+    options:
+      bar_height: 20
+      min_bar_height: 0
+      gradient: 1
+      reverse: 0
+      foreground: '#89b4fa'
+      gradient_color_1: '#74c7ec'
+      gradient_color_2: '#89b4fa'
+      gradient_color_3: '#cba6f7'
+      bars_number: 8
+      bar_spacing: 2
+      bar_width: 4
+      hide_empty: true
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+
+  # Apps
+  apps:
+    type: 'yasb.applications.ApplicationsWidget'
+    options:
+      container_padding:
+        top: 0
+        left: 8
+        bottom: 0
+        right: 8
+      label: '{data}'
+      app_list:
+        - { icon: "\uebc7", launch: 'wt -w 0 --profile PowerShell' }
+        - { icon: "\uebc9", launch: 'wt -w 0 --profile Ubuntu' }
+        - {
+            icon: "\udb82\uddf9",
+            launch: "C:\\Program Files (x86)\\AULA\\F99\\OemDrv.exe"
+          }
+        - {
+            icon: "\udb81\udc53",
+            launch: 'wt pwsh.exe -Command "Stop-Process -Name explorer && yasbc reload"'
+          }
+
+  # Notifications
+  notifications:
+    type: 'yasb.notifications.NotificationsWidget'
+    options:
+      label: "<span>\uf476</span> {count}"
+      label_alt: '{count} notifications'
+      hide_empty: true
+      tooltip: false
+      callbacks:
+        on_left: 'toggle_notification'
+        on_right: 'do_nothing'
+        on_middle: 'toggle_label'
+
+  # Launchpad
+  launchpad:
+    type: 'yasb.launchpad.LaunchpadWidget'
+    options:
+      label: "<span>\udb85\udcde</span>"
+      search_placeholder: 'Search apps...'
+      app_icon_size: 48
+      window:
+        fullscreen: false
+        width: 800
+        height: 600
+        overlay_block: true
+      window_style:
+        enable_blur: true
+        round_corners: true
+        round_corners_type: 'normal'
+        border_color: 'system'
+      window_animation:
+        fade_in_duration: 200
+        fade_out_duration: 200
+      callbacks:
+        on_left: 'toggle_launchpad'
+      app_title_shadow:
+        enabled: true
+        color: '#00000090'
+        offset: [1, 1]
+        radius: 2
+      app_icon_shadow:
+        enabled: true
+        color: '#00000090'
+        offset: [0, 2]
+        radius: 8

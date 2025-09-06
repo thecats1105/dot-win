@@ -1,0 +1,135 @@
+{
+  "code-runner.clearPreviousOutput": true,
+  "editor.minimap.enabled": false,
+  "code-runner.runInTerminal": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "workbench.iconTheme": "catppuccin-mocha",
+  "editor.fontFamily": "JetBrainsMono NFP, D2CodingLigature Nerd Font",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "workbench.colorCustomizations": {},
+  "explorer.confirmDragAndDrop": false,
+  "editor.codeLensFontFamily": "\"JetBrainsMono NFP\", \"D2CodingLigature Nerd Font\"",
+  "editor.linkedEditing": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "git.ignoreMissingGitWarning": true,
+  "workbench.startupEditor": "none",
+  "git.openRepositoryInParentFolders": "never",
+  "json.schemas": [],
+  "editor.fontLigatures": false,
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.layoutControl.enabled": false,
+  "explorer.decorations.colors": false,
+  "explorer.compactFolders": false,
+  "window.title": " ",
+  "workbench.statusBar.visible": false,
+  "window.menuBarVisibility": "compact",
+  "window.commandCenter": false,
+  "catppuccin.accentColor": "sapphire",
+  "catppuccin.bracketMode": "neovim",
+  "catppuccin.workbenchMode": "flat",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "custom-ui-style.electron": {
+    "frame": false
+  },
+  "custom-ui-style.font.monospace": "JetBrainsMono NFP, Pretendard",
+  "custom-ui-style.font.sansSerif": "JetBrainsMono NFP, Pretendard",
+  "window.titleBarStyle": "native",
+  "workbench.sideBar.location": "left",
+  "update.mode": "none",
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.list.smoothScrolling": true,
+  "workbench.activityBar.location": "top",
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.fontFamily": "JetBrainsMono NFP, D2CodingLigature Nerd Font",
+  "workbench.editor.empty.hint": "hidden",
+  "security.allowedUNCHosts": ["wsl.localhost", "wsl$"],
+  "go.toolsManagement.autoUpdate": true,
+  "remote.autoForwardPortsSource": "hybrid",
+  "explorer.confirmDelete": false,
+
+  /*
+    Choose a License
+  */
+  "license.author": "Taejun Park", // Change this to your name
+  "license.default": "mit", // Change this to your preferred license
+  "license.year": "auto", // This will automatically use the current year
+
+  /*
+    Vim
+  */
+  "vim.enableNeovim": true,
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["y"],
+      "commands": ["editor.action.clipboardCopyAction", "extension.vim_escape"]
+    },
+    {
+      "before": ["p"],
+      "commands": ["editor.action.clipboardPasteAction", "extension.vim_escape"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Do things without affecting the registers
+    {
+      "before": ["x"],
+      "after": ["\"", "_", "x"]
+    },
+
+    // Increment/Decrement
+    {
+      "before": ["+"],
+      "after": ["<C-a>"]
+    },
+    {
+      "before": ["-"],
+      "after": ["<C-x>"]
+    },
+
+    // Delete a word backwards
+    {
+      "before": ["d", "w"],
+      "after": ["v", "b", "\"", "_", "d"]
+    },
+
+    // Select All
+    {
+      "before": ["<C-a>"],
+      "after": ["g", "g", "V", "G"]
+    }
+  ],
+
+  /*
+    Formatting
+  */
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.renderFinalNewline": "off",
+  "editor.tabSize": 2,
+  "editorconfig.generateAuto": false,
+  "files.eol": "\n",
+
+  // Prettier
+  "prettier.arrowParens": "avoid",
+  "prettier.bracketSpacing": true,
+  "prettier.endOfLine": "lf",
+  "prettier.semi": false,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.resolveGlobalModules": true,
+
+  /*
+    PowerShell
+  */
+  "powershell.integratedConsole.showOnStartup": false,
+  "powershell.integratedConsole.startInBackground": true,
+  "powershell.integratedConsole.focusConsoleOnExecute": false
+}
