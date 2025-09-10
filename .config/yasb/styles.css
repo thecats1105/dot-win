@@ -65,6 +65,10 @@
   margin-right: 5px;
 }
 
+.home-widget .widget-container {
+  padding: 0;
+}
+
 .home-widget .icon {
   color: var(--blue);
   font-size: 14px;
@@ -407,6 +411,10 @@
   margin: 0 5px;
 }
 
+.cava-widget .widget-container {
+  padding: 0;
+}
+
 /* Apps */
 
 .apps-widget {
@@ -415,6 +423,10 @@
   height: 35px;
   margin: 0 5px;
   padding: 0;
+}
+
+.apps-widget .widget-container {
+  padding: 0 8px;
 }
 
 .apps-widget .label {

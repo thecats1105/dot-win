@@ -50,11 +50,6 @@ widgets:
       round_corners_type: 'normal'
       border_color: '#585b70'
       distance: 6
-      container_padding:
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
       alignment: 'left'
       direction: 'down'
       menu_labels:
@@ -201,21 +196,11 @@ widgets:
       bar_spacing: 2
       bar_width: 4
       hide_empty: true
-      container_padding:
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
 
   # Apps
   apps:
     type: 'yasb.applications.ApplicationsWidget'
     options:
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
       label: '{data}'
       app_list:
         - { icon: "\uebc7", launch: 'wt -w 0 --profile PowerShell' }
