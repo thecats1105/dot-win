@@ -58,7 +58,6 @@ function which ($command) {
 function _update {
   scoop update -a && scoop cleanup -a
   npm update -g
-  nvim --headless "+Lazy! update" +qa
   winget upgrade
 }
 
