@@ -19,6 +19,9 @@ Set-PSReadLineKeyHandler -Key 'Alt+l' -Function AcceptNextSuggestionWord
 Import-Module PSScriptAnalyzer
 Set-Alias -Name 'psprettier' -Value 'Invoke-Formatter'
 
+# PSEverything
+Import-Module PSEverything
+
 # fnm
 fnm env --use-on-cd --version-file-strategy=recursive --resolve-engines --shell powershell | Out-String | Invoke-Expression
 $Env:Path = '%USERPROFILE%\.node_modules' + ';' + $Env:Path
