@@ -1,68 +1,141 @@
 {
-  "code-runner.clearPreviousOutput": true,
-  "editor.minimap.enabled": false,
-  "code-runner.runInTerminal": true,
-  "[python]": {
-    "editor.formatOnType": true
-  },
-  "liveServer.settings.donotShowInfoMsg": true,
-  "workbench.iconTheme": "catppuccin-mocha",
+  /*
+    Editor Settings
+  */
   "editor.fontFamily": "JetBrainsMono NFP, D2CodingLigature Nerd Font",
+  "editor.fontLigatures": false,
+  "editor.codeLensFontFamily": "JetBrainsMono NFP, D2CodingLigature Nerd Font",
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "editor.renderFinalNewline": "off",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-  "workbench.colorCustomizations": {},
-  "explorer.confirmDragAndDrop": false,
-  "editor.codeLensFontFamily": "\"JetBrainsMono NFP\", \"D2CodingLigature Nerd Font\"",
   "editor.linkedEditing": true,
-  "liveServer.settings.donotVerifyTags": true,
-  "git.ignoreMissingGitWarning": true,
-  "workbench.startupEditor": "none",
-  "git.openRepositoryInParentFolders": "never",
-  "json.schemas": [],
-  "editor.fontLigatures": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  /*
+    Workbench Settings
+  */
+  "workbench.iconTheme": "catppuccin-mocha",
   "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.colorCustomizations": {},
+  "workbench.startupEditor": "none",
   "workbench.layoutControl.enabled": false,
-  "explorer.decorations.colors": false,
-  "explorer.compactFolders": false,
-  "window.title": " ",
   "workbench.statusBar.visible": false,
+  "workbench.sideBar.location": "left",
+  "workbench.activityBar.location": "top",
+  "workbench.list.smoothScrolling": true,
+  "workbench.editor.empty.hint": "hidden",
+
+  /*
+    Window & UI Style
+  */
+  "window.title": " ",
   "window.menuBarVisibility": "compact",
   "window.commandCenter": false,
-  "catppuccin.accentColor": "sapphire",
-  "catppuccin.bracketMode": "neovim",
-  "catppuccin.workbenchMode": "flat",
-  "editor.multiCursorModifier": "ctrlCmd",
+  "window.titleBarStyle": "native",
   "custom-ui-style.electron": {
     "frame": false
   },
   "custom-ui-style.font.monospace": "JetBrainsMono NFP, Pretendard",
   "custom-ui-style.font.sansSerif": "JetBrainsMono NFP, Pretendard",
-  "window.titleBarStyle": "native",
-  "workbench.sideBar.location": "left",
-  "update.mode": "none",
-  "editor.smoothScrolling": true,
-  "editor.cursorBlinking": "smooth",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "workbench.list.smoothScrolling": true,
-  "workbench.activityBar.location": "top",
+
+  /*
+    Explorer Settings
+  */
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.decorations.colors": false,
+  "explorer.compactFolders": false,
+
+  /*
+    Terminal & Shell Settings
+  */
   "terminal.integrated.smoothScrolling": true,
   "terminal.integrated.fontFamily": "JetBrainsMono NFP, D2CodingLigature Nerd Font",
-  "workbench.editor.empty.hint": "hidden",
-  "security.allowedUNCHosts": ["wsl.localhost", "wsl$"],
-  "go.toolsManagement.autoUpdate": true,
-  "remote.autoForwardPortsSource": "hybrid",
-  "explorer.confirmDelete": false,
+  "terminal.integrated.allowChords": false,
+  "terminal.integrated.sendKeybindingsToShell": true,
+  "terminal.integrated.suggest.enabled": false,
+  "terminal.integrated.suggest.quickSuggestions": false,
+  "powershell.integratedConsole.showOnStartup": false,
+  "powershell.integratedConsole.startInBackground": true,
+  "powershell.integratedConsole.focusConsoleOnExecute": false,
 
   /*
-    Choose a License
+    Git Settings
   */
-  "license.author": "Taejun Park", // Change this to your name
-  "license.default": "mit", // Change this to your preferred license
-  "license.year": "auto", // This will automatically use the current year
+  "git.ignoreMissingGitWarning": true,
+  "git.openRepositoryInParentFolders": "never",
 
   /*
-    Vim
+    Python Settings
+  */
+  "python.analysis.typeCheckingMode": "strict",
+  "python.createEnvironment.trigger": "off",
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.formatOnType": true
+  },
+
+  /*
+    AI Settings (Copilot & GitLens)
+  */
+  "chat.mcp.gallery.enabled": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-5-mini",
+  "gitlens.ai.generateCommits.customInstructions": "- Follow Angular Commit Convention\\n- Lowercase first letter",
+
+  /*
+    Prettier Settings
+  */
+  "prettier.arrowParens": "avoid",
+  "prettier.bracketSpacing": true,
+  "prettier.endOfLine": "lf",
+  "prettier.semi": false,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.resolveGlobalModules": true,
+
+  /*
+    License Settings
+  */
+  "license.author": "Taejun Park",
+  "license.default": "mit",
+  "license.year": "auto",
+
+  /*
+    Extension Specific Settings
+  */
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.runInTerminal": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "go.toolsManagement.autoUpdate": true,
+  "catppuccin.accentColor": "sapphire",
+  "catppuccin.bracketMode": "neovim",
+  "catppuccin.workbenchMode": "flat",
+  "editorconfig.generateAuto": false,
+  "files.eol": "\n",
+
+  /*
+    General & Security
+  */
+  "update.mode": "none",
+  "security.allowedUNCHosts": ["wsl.localhost", "wsl$"],
+  "remote.autoForwardPortsSource": "hybrid",
+  "redhat.telemetry.enabled": true,
+  "json.schemas": [],
+
+  /*
+    Vim Settings
   */
   "vim.enableNeovim": true,
   "vim.leader": "<space>",
@@ -83,7 +156,6 @@
       "before": ["x"],
       "after": ["\"", "_", "x"]
     },
-
     // Increment/Decrement
     {
       "before": ["+"],
@@ -93,43 +165,15 @@
       "before": ["-"],
       "after": ["<C-x>"]
     },
-
     // Delete a word backwards
     {
       "before": ["d", "w"],
       "after": ["v", "b", "\"", "_", "d"]
     },
-
     // Select All
     {
       "before": ["<C-a>"],
       "after": ["g", "g", "V", "G"]
     }
-  ],
-
-  /*
-    Formatting
-  */
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.renderFinalNewline": "off",
-  "editor.tabSize": 2,
-  "editorconfig.generateAuto": false,
-  "files.eol": "\n",
-
-  // Prettier
-  "prettier.arrowParens": "avoid",
-  "prettier.bracketSpacing": true,
-  "prettier.endOfLine": "lf",
-  "prettier.semi": false,
-  "prettier.tabWidth": 2,
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "none",
-  "prettier.resolveGlobalModules": true,
-
-  /*
-    PowerShell
-  */
-  "powershell.integratedConsole.showOnStartup": false,
-  "powershell.integratedConsole.startInBackground": true,
-  "powershell.integratedConsole.focusConsoleOnExecute": false
+  ]
 }
