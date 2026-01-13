@@ -38,5 +38,13 @@
     "key": "tab",
     "command": "-editor.action.inlineSuggest.commit",
     "when": "inInlineEditsPreviewEditor"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.toggleAuxiliaryBar"
   }
 ]
